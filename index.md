@@ -9,7 +9,7 @@ This project synthesizes core real-time embedded concepts into a cohesive system
 As an engineer specializing in the Digital VLSI Circuits track, my primary focus is on hands-on hardware engineering, physical circuit design, and bringing physical components to life. This project demonstrates my ability to bridge the gap between physical hardware and low-level firmware. By implementing a FreeRTOS dual-core pipeline, I ensured that critical hardware probing tasks remain deterministic and isolated from software-level network latency. I excel in environments where computer repair, component-level debugging, and strict hardware-software integration are required to hit rigorous manufacturing yields.
 
 ## 3. Demo Video
-
+https://youtu.be/dp5mt0t1oXA
 
 ## 4. System Architecture
 * **CORE 1 (Real-Time Plane):** `vlsi_probe_task` -> Queue -> `signal_eval_task` -> Event Group -> `yield_coord_task` -> `estop_responder_task`
