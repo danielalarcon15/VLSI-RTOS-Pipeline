@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "author": "Capstone Developer",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-s3-devkitc-1",
+      "id": "esp",
+      "top": -0.18,
+      "left": 4.57,
+      "attrs": { "builder": "esp-idf" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_estop",
+      "top": 180,
+      "left": -150,
+      "attrs": { "color": "red", "label": "E-STOP" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_alarm",
+      "top": -80,
+      "left": 50,
+      "attrs": { "color": "red", "label": "HALT" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "res1",
+      "top": 40,
+      "left": 200,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "btn_estop:1.l", "esp:18", "red", [ "v0" ] ],
+    [ "btn_estop:2.r", "esp:GND.1", "black", [ "v10", "h-50" ] ],
+    [ "esp:2", "res1:1", "red", [ "v0" ] ],
+    [ "res1:2", "led_alarm:A", "red", [ "h0" ] ],
+    [ "led_alarm:C", "esp:GND.2", "black", [ "v20", "h-40" ] ]
+  ],
+  "serialMonitor": { "display": "terminal" },
+  "dependencies": {}
+}
