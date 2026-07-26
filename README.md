@@ -1,7 +1,7 @@
 # Capstone Project: Digital VLSI Circuit Testing Pipeline
 
 ## Project Overview
-This project synthesizes core real-time embedded concepts into a cohesive system themed around **Digital VLSI Diagnostics and Semiconductor Manufacturing**. It utilizes a dual-core architecture to strictly separate real-time hardware probing functions from non-deterministic network observability tasks. 
+This project synthesizes core real-time embedded concepts into a cohesive system themed around Digital VLSI Diagnostics and Semiconductor Manufacturing. It utilizes a dual-core architecture to strictly separate real-time hardware probing functions from non-deterministic network observability tasks.
 
 Physical circuits are simulated to be "probed" at a high rate. The system monitors for propagation delay and voltage limit violations (setup/hold time failures). Data is passed through a deterministic IPC pipeline, and shared manufacturing yield statistics are safely aggregated and displayed to a web dashboard.
 
